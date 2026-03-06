@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+<div class="container">
+  <form action="http://127.0.0.1:5000/submit-voter" 
+      method="POST" 
+      enctype="multipart/form-data">
+
+    <h1>New Voter ID Request</h1>
+    <div class="subtitle">Get Election ID Fastly!</div>
+
+    <h2>Contact Details</h2>
+      <div class="form-grid-2">
+
+          <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="fullName">
+          </div>
+
+          <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" name="mobile">
+          </div>
+
+          <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email">
+          </div>
+      </div>
+
+    <h2>Voter ID Details</h2>
+      <div class="form-grid-2">
+
+          <div class="form-group">
+          <label>முழுப்பெயர் (தமிழில்)</label>
+          <input type="text" name="tamilName">
+          </div>
+
+          <div class="form-group">
+          <label>Full Name (English)</label>
+          <input type="text" name="fullNameEnglish">
+          </div>
+
+          <div class="form-group">
+          <label>தந்தையின் பெயர் (தமிழில்)</label>
+          <input type="text" name="fatherNameTamil">
+
+          </div>
+
+          <div class="form-group">
+          <label>Father's Name (English)</label>
+          <input type="text" name="fatherNameEnglish">
+          </div>
+
+          <div class="form-group">
+          <label>முகவரி (தமிழில்)</label>
+          <input type="text" name="addressTamil">
+          </div>
+
+          <div class="form-group">
+          <label>Address (English)</label>
+          <input type="text" name="addressEnglish">
+          </div>
+
+          <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" name="dob">
+          </div>
+
+          <div class="form-group">
+          <label>Gender</label>
+              <select name="gender">
+              <option value="">-- Select Gender --</option>
+              <option value="male">Male/ஆண்</option>
+              <option value="female">Female/பெண்</option>
+              <option value="other">Other/மற்றவை</option>
+              </select>
+          </div>
+      </div>
+      <h2>Document Details</h2>
+          <div class="form-grid-2">
+
+          <div class="form-group">
+          <label>Identity Proof (Front Page)</label>
+          <input type="file" name="identityProofFront">
+          </div>
+
+          <div class="form-group">
+          <label>Identity Proof (Back Page)</label>
+          <input type="file" name="identityProofBack">
+          </div>
+
+          <div class="form-group">
+          <label>Passport Size Photo</label>
+          <input type="file" name="photo">
+          </div>
+      </div>
+
+
+    <button>Submit</button>
+  </form>
+
+</div>
+</body>
+</html>
